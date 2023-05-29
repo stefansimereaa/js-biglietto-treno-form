@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css' integrity='sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==' crossorigin='anonymous'/>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h1>CALCOLA IL PREZZO DEL BIGLIETTO</h1>
+        <div class="row row-cols-3 justify-content-center mt-5">
+            <div class="col mb-5">
+                <label for="name" class="mb-3">Nome Cognome</label><br>
+                <div class="input-group">
+                    <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" name="name" id="name">
+                </div>
+            </div>
+            <div class="col">
+                <label for="trip-length" class="mb-3">Km da percorrere</label><br>
+                <div class="input-group">
+                    <input type="number" class="form-control" min="1" step="10" value="1" aria-label="Username" aria-describedby="basic-addon1" name="trip-length" id="trip-length">
+                </div>
+            </div>
+            <div class="col">
+                <label for="Age" class="form-label mb-3">Fascia d'età</label>
+                <div class="input-group">
+                  <select class="form-select" id="Age">
+                    <option selected>Scegli...</option>
+                    <option value="1">Maggiorenne</option>
+                    <option value="2">Minorenne</option>
+                    <option value="3">Anziano</option>
+                  </select>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center align-items-center">
+                <input class="btn btn-primary me-4" type="button" value="Genera" id="generates">
+                <input class="btn btn-primary" type="button" value="Annulla" id="cancel">
+            </div>
+        </div>
+        <div class="row">
+            <h1>IL TUO BIGLIETTO</h1>
+            <div class="col mb-5">
+                <h3>Dettaglio passegeri</h3>
+                <div class="col">
+                <h3>NOME PASSEGERO</h3>
+                <h4 id="Username"></h4>
+                </div>
+            </div>
+            <div class="col">
+                <h3>Offerta</h3>
+                <h4 id="Userage"></h4>
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+
+    </div>
+    <!-- Js -->
+    <script src="js/script.js"></script>
+</body>
+</html>
