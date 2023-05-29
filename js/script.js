@@ -74,7 +74,7 @@ button.addEventListener(`click`, function() {
         sconto = tickets * 0.4;
     }
     const prezzoFinale = tickets - sconto;
-    ticketPrice.textContent = prezzoFinale.toFixed(2);
+    ticketPrice.textContent = prezzoFinale.toFixed(2) + `€`;
 
 
     // Randomizzo carozza
