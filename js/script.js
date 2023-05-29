@@ -60,7 +60,21 @@ button.addEventListener(`click`, function() {
     selectedOutput.textContent = selectedOption;
 
     // Prezzo
+    const userkm = document.getElementById(`trip-length`)
+    const ageselect = document.getElementById(`Age`)
+    const ticketPrice = document.getElementById(`price`)
+    const km = (userkm.value);
+    const age = ageselect.value;
 
+    const tickets = 0.21 * km;
+    let sconto = 0;
+    if(age === `minorenne`) {
+        sconto = tickets * 0.2;
+    } else if (age === `anziano`){
+        sconto = tickets * 0.4;
+    }
+    const prezzoFinale = tickets - sconto;
+    ticketPrice.textContent = prezzoFinale.toFixed(2);
 
 
     // Randomizzo carozza
@@ -69,7 +83,7 @@ button.addEventListener(`click`, function() {
     const max = 200;
     const number = Math.floor(Math.random() * (max - min) + min);
     generateCarriage.textContent = number;
-    
+
     // Randomizzo Cp
     const  generateCp = document.getElementById(`number-cp`)
     const minCp = 1;
