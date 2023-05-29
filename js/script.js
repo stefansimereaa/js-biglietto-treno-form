@@ -15,7 +15,7 @@ console.log(`JS OK`);
 
 // Recuperare elementi dalla pagina
 
-const UserName = document.getElementById(`name`)
+const UserName = document.getElementById(`name`);
 console.log(UserName);
 
 const UserTrip = document.getElementById(`trip-length`)
@@ -27,7 +27,7 @@ console.log(UserAge);
 const UserNameTycket = document.getElementById(`Username`)
 console.log(UserNameTycket);
 
-const UserAgeTycket = document.getElementById(`Userage`)
+const UserAgeTycket = document.getElementById(``)
 console.log(UserAgeTycket);
 
 
@@ -41,12 +41,31 @@ const button2 = document.getElementById(`cancel`)
 console.log(button2);
 
 //Resto in ascolto del click sul bottone
-
+//Button Generates
 button.addEventListener(`click`, function() {
 
-    const name = document.getElementById(`name`)
-    console.log(name);
+    //Row Display
+    const ticket = document.getElementById(`ticket`)
+    ticket.classList.remove(`d-none`);
+    ticket.classList.add(`d-block`);
+
+    // Nome
+    const name = document.getElementById(`name`).value;
+    const Nameoutput = document.getElementById(`Username`);
+    Nameoutput.textContent = name;
+
+    // Offerta
+    const selectElement = document.getElementById(`Age`)
+    const selectedOption = selectElement.options[selectElement.selectedIndex].text;
+    const selectedOutput = document.getElementById(`Userage`);
+    selectedOutput.textContent = selectedOption;
+})
 
 
-    UserNameTycket.innerText += UserName;
+//Button Delete
+button2.addEventListener(`click`, function(){
+
+    document.getElementById(`name`).value = "";
+    const selectElement = document.getElementById(`Age`)
+    selectElement.selectedIndex = -1;
 })
