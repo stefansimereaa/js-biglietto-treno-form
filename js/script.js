@@ -27,9 +27,8 @@ console.log(UserAge);
 const UserNameTycket = document.getElementById(`Username`)
 console.log(UserNameTycket);
 
-const UserAgeTycket = document.getElementById(``)
-console.log(UserAgeTycket);
-
+const Carriage = document.getElementById(`number-carriage`)
+console.log(Carriage);
 
 
 // Buttons 
@@ -47,7 +46,7 @@ button.addEventListener(`click`, function() {
     //Row Display
     const ticket = document.getElementById(`ticket`)
     ticket.classList.remove(`d-none`);
-    ticket.classList.add(`d-block`);
+    ticket.classList.add(`d-block`, `d-flex`);
 
     // Nome
     const name = document.getElementById(`name`).value;
@@ -59,13 +58,37 @@ button.addEventListener(`click`, function() {
     const selectedOption = selectElement.options[selectElement.selectedIndex].text;
     const selectedOutput = document.getElementById(`Userage`);
     selectedOutput.textContent = selectedOption;
+
+    // Prezzo
+
+
+
+    // Randomizzo carozza
+    const  generateCarriage = document.getElementById(`number-carriage`)
+    const min = 1;
+    const max = 200;
+    const number = Math.floor(Math.random() * (max - min) + min);
+    generateCarriage.textContent = number;
+    
+    // Randomizzo Cp
+    const  generateCp = document.getElementById(`number-cp`)
+    const minCp = 1;
+    const maxCp = 9999;
+    const numberCp = Math.floor(Math.random() * (maxCp - minCp) + minCp);
+    generateCp.textContent = numberCp;
 })
 
 
 //Button Delete
 button2.addEventListener(`click`, function(){
 
+    //Row Display
+    const ticket = document.getElementById(`ticket`)
+    ticket.classList.add(`d-none`);
+
+    // Nome
     document.getElementById(`name`).value = "";
+    // Offerta
     const selectElement = document.getElementById(`Age`)
     selectElement.selectedIndex = -1;
 })
